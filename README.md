@@ -39,7 +39,7 @@ DUCKDNS_TOKEN="abc123def456ghi789
   
 If you are running the script not as root make the following changes.
 
-- Edit the script lines 6 and 7:
+- Locate the following lines in the script in the "Configuration" section:
 ```
 LOG_FILE="/var/log/duckdns_updater.log"
 LAST_IP_FILE="/var/tmp/last_duckdns_ip.txt"
