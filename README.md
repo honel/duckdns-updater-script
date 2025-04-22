@@ -89,7 +89,7 @@ You should see lines like:
 ```
 
 🧠 Note:
-You can also `tail` the log and follow changes as they happen:
+You can also `tail` the log and follow changes as they happen, e.g.:
 ```
 tail -f ~/duckdns/duckdns_updater.log
 ```
