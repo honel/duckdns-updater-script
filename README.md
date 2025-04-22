@@ -64,7 +64,7 @@ Open your user’s crontab:
 crontab -e
 ```
 
-Add the last line to the end of your cron job list to run it every 5 minutes:
+Add the last line of the following block to the end of your cron job list to run it every 5 minutes:
 ```
 # ┌───────────── minute (0 - 59)
 # │ ┌───────────── hour (0 - 23)
