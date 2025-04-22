@@ -53,18 +53,18 @@ LAST_IP_FILE="$HOME/duckdns/last_duckdns_ip.txt"
 
 This avoids any need for root access.
 
-4. ✅ Make the script executable
+4. ✅ Make the script executable:
 ```
 chmod +x duckdns_updater.sh
 ```
 
-5. 🔁 Set up a cron job (as your user)
+5. 🔁 Set up a cron job (as your user):
 Open your user’s crontab:
 ```
 crontab -e
 ```
 
-Add the last line of the following block to the end of your cron job list to run it every 5 minutes:
+Add the last line of the following block to your cron job list to run it every 5 minutes:
 ```
 # ┌───────────── minute (0 - 59)
 # │ ┌───────────── hour (0 - 23)
