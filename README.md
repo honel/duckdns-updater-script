@@ -29,29 +29,26 @@ wget https://raw.githubusercontent.com/honel/duckdns-updater-script/refs/heads/m
 ```
 
 3. 📂 Edit the script:
-Use your actual `DUCKDNS_DOMAIN` and `DUCKDNS_TOKEN`.
+In the configuration section of the script, find the following variables and replace them with your actual information:
+`DUCKDNS_DOMAIN` and `DUCKDNS_TOKEN`
 
-Example placeholders to replace:
+Example:
 ```
 DUCKDNS_DOMAIN="myraspberrypiexample.duckdns.org"
 DUCKDNS_TOKEN="abc123def456ghi789"
 ```
   
-If you are running the script not as root make the following changes.
-
-Locate the following lines in the script in the "Configuration" section:
+If you are running the script not as `root` you should modify the `LOG_FILE` and the `LAST_IP_FILE` location variables in the "Configuration" section of the script:
 ```
 LOG_FILE="/var/log/duckdns_updater.log"
 LAST_IP_FILE="/var/tmp/last_duckdns_ip.txt"
 ```
 
-Change them to:
+For example, change them to:
 ```
 LOG_FILE="$HOME/duckdns/duckdns_updater.log"
 LAST_IP_FILE="$HOME/duckdns/last_duckdns_ip.txt"
 ```
-
-This avoids any need for root access.
 
 4. ✅ Make the script executable:
 ```
