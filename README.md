@@ -69,10 +69,11 @@ Add the last line of the following block to the end of your cron job list to run
 # ┌───────────── minute (0 - 59)
 # │ ┌───────────── hour (0 - 23)
 # │ │ ┌───────────── day of month (1 - 31)
-# │ │ │ ┌───────────── month (1 - 12)
-# │ │ │ │ ┌───────────── day of week (0 - 7) (Sunday=0 or 7)
-# │ │ │ │ │
-# │ │ │ │ │
+# │ │ │    ┌───────────── month (1 - 12)
+# │ │ │    │   ┌───────────── day of week (0 - 7) (Sunday=0 or 7)
+# │ │ │    │   │
+# │ │ │    │   │
+# m h dom mon dow   command
 */5 * * * * ~/duckdns/duckdns_update.sh  # runs every 5 minutes
 ```
 You can check if your crontab job is in the current crontab with:
