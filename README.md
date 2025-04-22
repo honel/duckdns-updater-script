@@ -33,8 +33,8 @@ Use your actual `DUCKDNS_DOMAIN` and `DUCKDNS_TOKEN`.
 
 Example placeholders to replace:
 ```
-DUCKDNS_DOMAIN="myraspberrypi"
-DUCKDNS_TOKEN="abc123def456ghi789
+DUCKDNS_DOMAIN="myraspberrypiexample.duckdns.org"
+DUCKDNS_TOKEN="abc123def456ghi789"
 ```
   
 If you are running the script not as root make the following changes.
