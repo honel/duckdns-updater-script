@@ -23,15 +23,15 @@ You schedule it with cron to run every few minutes, keeping your DuckDNS address
 mkdir -p ~/duckdns; cd ~/duckdns
 ```
 
-3. 📝 Download the script file
+2. 📝 Download the script file
 ```
 wget https://raw.githubusercontent.com/honel/duckdns-updater-script/refs/heads/main/duckdns_update.sh
 ```
 
-5. 📂 Edit the script:
+3. 📂 Edit the script:
 Use your actual `DUCKDNS_DOMAIN` and `DUCKDNS_TOKEN`.
 
-- Example placeholders to replace:
+Example placeholders to replace:
 ```
 DUCKDNS_DOMAIN="myraspberrypi"
 DUCKDNS_TOKEN="abc123def456ghi789
@@ -39,7 +39,7 @@ DUCKDNS_TOKEN="abc123def456ghi789
   
 If you are running the script not as root make the following changes.
 
-- Locate the following lines in the script in the "Configuration" section:
+Locate the following lines in the script in the "Configuration" section:
 ```
 LOG_FILE="/var/log/duckdns_updater.log"
 LAST_IP_FILE="/var/tmp/last_duckdns_ip.txt"
