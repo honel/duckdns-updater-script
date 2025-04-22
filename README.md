@@ -55,7 +55,7 @@ This avoids any need for root access.
 
 4. ✅ Make the script executable
 ```
-chmod +x duckdns_update.sh
+chmod +x duckdns_updater.sh
 ```
 
 5. 🔁 Set up a cron job (as your user)
@@ -74,7 +74,7 @@ Add the last line of the following block to the end of your cron job list to run
 # │ │ │    │   │
 # │ │ │    │   │
 # m h dom mon dow   command
-*/5 * * * * ~/duckdns/duckdns_update.sh  # runs every 5 minutes
+*/5 * * * * ~/duckdns/duckdns_updater.sh  # runs every 5 minutes
 ```
 You can check if your crontab job is in the current crontab with:
 ```
