@@ -88,8 +88,8 @@ You should see lines like:
 2025-04-22 11:25:01 - DuckDNS update successful
 ```
 
-🧠 Notes:
-You can also tail the log and follow changes as they happen:
+🧠 Note:
+You can also `tail` the log and follow changes as they happen:
 ```
 tail -f ~/duckdns/duckdns_updater.log
 ```
