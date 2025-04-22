@@ -25,7 +25,7 @@ mkdir -p ~/duckdns; cd ~/duckdns
 
 2. 📝 Download the script file
 ```
-wget https://raw.githubusercontent.com/honel/duckdns-updater-script/refs/heads/main/duckdns_update.sh
+wget https://raw.githubusercontent.com/honel/duckdns-updater-script/refs/heads/main/duckdns_updater.sh
 ```
 
 3. 📂 Edit the script:
