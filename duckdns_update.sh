@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# -------------------------------------------------------------------
+# DuckDNS Updater Script for Raspberry Pi
+# 
+# This script checks your current public IP and updates your DuckDNS
+# domain if the IP has changed. It logs the changes to a local file.
+# 
+# Reference: https://github.com/honel/duckdns-updater-script/
+# -------------------------------------------------------------------
+
 # === CONFIGURATION ===
 DUCKDNS_DOMAIN="your-subdomain"     # Replace with your DuckDNS subdomain
 DUCKDNS_TOKEN="your-token"          # Replace with your DuckDNS token
