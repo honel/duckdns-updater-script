@@ -74,7 +74,7 @@ Add the last line to the end of your cron job list to run it every 5 minutes:
 # │ │ │ │ ┌───────────── day of week (0 - 7) (Sunday=0 or 7)
 # │ │ │ │ │
 # │ │ │ │ │
-*/5 * * * * ~/duckdns/duckdns_update.sh
+*/5 * * * * ~/duckdns/duckdns_update.sh  # runs every 5 minutes
 ```
 
 6. 🔍 Check if it works
