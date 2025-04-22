@@ -3,7 +3,7 @@ This script automatically updates your DuckDNS domain with your current public I
 
 # 🔍 How it works:
 1. Fetches your public IP:  The script detects your current external (WAN) IP address by using the following external service:
-> https://api.ipify.org
+```https://api.ipify.org```
 
 2. Checks for changes
 It compares the current IP with the last recorded IP (stored in a local file).
@@ -20,50 +20,77 @@ You schedule it with cron to run every few minutes, keeping your DuckDNS address
 
 # 🧰 Step-by-Step Setup
 1. 📁 Create a directory for the script:
-> mkdir -p ~/duckdns; cd ~/duckdns
+```
+mkdir -p ~/duckdns; cd ~/duckdns
+```
 
-2. 📝 Download the script file
-> wget https://raw.githubusercontent.com/honel/duckdns-updater-script/refs/heads/main/duckdns_update.sh
+3. 📝 Download the script file
+```
+wget https://raw.githubusercontent.com/honel/duckdns-updater-script/refs/heads/main/duckdns_update.sh
+```
 
-3. 📂 Edit the script:
-Use your actual DUCKDNS_DOMAIN and DUCKDNS_TOKEN.
+5. 📂 Edit the script:
+Use your actual `DUCKDNS_DOMAIN` and `DUCKDNS_TOKEN`.
 
 - Example placeholders to replace:
-> DUCKDNS_DOMAIN="myraspberrypi"
-> DUCKDNS_TOKEN="abc123def456ghi789"
+```
+DUCKDNS_DOMAIN="myraspberrypi"
+DUCKDNS_TOKEN="abc123def456ghi789
+```
   
 If you are running the script not as root make the following changes.
 
 - Edit the script lines 6 and 7:
-> LOG_FILE="/var/log/duckdns_updater.log"
-> LAST_IP_FILE="/var/tmp/last_duckdns_ip.txt
+```
+LOG_FILE="/var/log/duckdns_updater.log"
+LAST_IP_FILE="/var/tmp/last_duckdns_ip.txt"
+```
 
 Change them to:
-> LOG_FILE="$HOME/duckdns/duckdns_updater.log"
-> LAST_IP_FILE="$HOME/duckdns/last_duckdns_ip.txt
+```
+LOG_FILE="$HOME/duckdns/duckdns_updater.log"
+LAST_IP_FILE="$HOME/duckdns/last_duckdns_ip.txt"
+```
 
 This avoids any need for root access.
 
 4. ✅ Make the script executable
-> chmod +x duckdns_update.sh
+```
+chmod +x duckdns_update.sh
+```
 
 5. 🔁 Set up a cron job (as your user)
 Open your user’s crontab:
-> crontab -e
+```
+crontab -e
+```
 
-Add this line at the end to run it every 5 minutes:
-> */5 * * * * ~/duckdns/duckdns_update.sh
+Add the last line to the end of your cron job list to run it every 5 minutes:
+```
+# ┌───────────── minute (0 - 59)
+# │ ┌───────────── hour (0 - 23)
+# │ │ ┌───────────── day of month (1 - 31)
+# │ │ │ ┌───────────── month (1 - 12)
+# │ │ │ │ ┌───────────── day of week (0 - 7) (Sunday=0 or 7)
+# │ │ │ │ │
+# │ │ │ │ │
+*/5 * * * * ~/duckdns/duckdns_update.sh
+```
 
 6. 🔍 Check if it works
 After a few minutes, check the log:
 > cat ~/duckdns/duckdns_updater.log
 
 You should see lines like:
-> 2025-04-22 11:25:00 - IP changed from (none) to 203.0.113.42
-> 2025-04-22 11:25:01 - DuckDNS update successful
+```
+2025-04-22 11:25:00 - IP changed from (none) to 203.0.113.42
+2025-04-22 11:25:01 - DuckDNS update successful
+```
 
 🧠 Notes:
 You can also tail the log and follow changes as they happen:
-> tail -f ~/duckdns/duckdns_updater.log
+```
+tail -f ~/duckdns/duckdns_updater.log
+```
 
 The script will only log when the IP changes or something goes wrong.
