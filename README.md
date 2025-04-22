@@ -1,7 +1,7 @@
 # 📝 Script Description
 This script automatically updates your DuckDNS domain with your current public IP address. It is designed to run on a Raspberry Pi (or any Linux system) and ensures your DuckDNS hostname always points to your correct external IP — useful when your home internet IP changes.
 
-# 🔍 How it works:
+# 🔍 How it works
 1. Fetches your public IP:  The script detects your current external (WAN) IP address by using the following external service:
 ```https://api.ipify.org```
 
