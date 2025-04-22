@@ -5,18 +5,17 @@ This script automatically updates your DuckDNS domain with your current public I
 1. Fetches your public IP:  The script detects your current external (WAN) IP address by using the following external service:
 ```https://api.ipify.org```
 
-2. Checks for changes
+2. Checks for changes:
 It compares the current IP with the last recorded IP (stored in a local file).
 
-3. Updates DuckDNS only when needed
+3. Updates DuckDNS only when needed:
 If the IP has changed, it sends an update request to DuckDNS. If the update is successful, it logs the change and saves the new IP. If the IP hasn’t changed, it does nothing (no log, no update).
 
-4. Logs actions
+4. Logs actions: 
 It only logs events when the IP changes or if there’s an error. Logs include date, time, old IP, new IP, and the result of the update attempt.
 
-5. Runs automatically via cron
+5. Runs automatically via cron: 
 You schedule it with cron to run every few minutes, keeping your DuckDNS address up-to-date without manual effort.
-
 
 # 🧰 Step-by-Step Setup
 1. 📁 Create a directory for the script:
